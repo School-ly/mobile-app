@@ -13,7 +13,7 @@
             <Image src="font://&#xf1ea;" class="far t-36" />
         </TabStripItem>
         <TabStripItem class="navigation__item">
-            <Label text="Search" />
+            <Label text="Feed" />
             <Image src="font://&#xf002;" class="fas t-36" />
         </TabStripItem>
         <TabStripItem class="navigation__item">
@@ -35,7 +35,7 @@
     </TabContentItem>
 
     <TabContentItem>
-        <Frame defaultPage="search/search-page" />
+        <Frame defaultPage="feed/feed-items-page" />
     </TabContentItem>
 
     <TabContentItem>
