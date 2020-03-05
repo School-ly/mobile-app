@@ -1,48 +1,30 @@
-<BottomNavigation>
-    <TabStrip>
-        <TabStripItem class="navigation__item">
-            <!--
-                Note TabStripItem will only accept single Label and/or single Image elements that it
-                will "adopt"; any other layout elements you try to specify will be ignored
-            -->
-            <Label text="Home" />
-            <Image src="font://&#xf015;" class="fas t-36" />
-        </TabStripItem>
-        <TabStripItem class="navigation__item">
-            <Label text="Browse" />
-            <Image src="font://&#xf1ea;" class="far t-36" />
-        </TabStripItem>
-        <TabStripItem class="navigation__item">
-            <Label text="Feed" />
-            <Image src="font://&#xf002;" class="fas t-36" />
-        </TabStripItem>
-        <TabStripItem class="navigation__item">
-            <Label text="Search" />
-            <Image src="font://&#xf002;" class="fas t-36" />
-        </TabStripItem>
-        <TabStripItem class="navigation__item">
-            <Label text="Search" />
-            <Image src="font://&#xf002;" class="fas t-36" />
-        </TabStripItem>
-    </TabStrip>
+<!-- 
+	I am using plain stacklayout here, you can use any layout you want.
+	You also can use nativescript-ripple to get some ripple effect.
+	But remember to modify components on AppRootViewModel and 
+	modules/navigation-handler file.
+ -->
 
-    <TabContentItem>
-        <Frame defaultPage="home/home-items-page" />
-    </TabContentItem>
+<GridLayout rows="*, auto" columns="*" loaded="onLoaded">
 
-    <TabContentItem>
-        <Frame defaultPage="browse/browse-page" />
-    </TabContentItem>
+	<Frame row="0" defaultPage="page1/page1"/>
 
-    <TabContentItem>
-        <Frame defaultPage="feed/feed-items-page" />
-    </TabContentItem>
-
-    <TabContentItem>
-        <Frame defaultPage="search/search-page" />
-    </TabContentItem>
-
-    <TabContentItem>
-        <Frame defaultPage="search/search-page" />
-    </TabContentItem>
-</BottomNavigation>
+	<GridLayout backgroundColor="#fff" visibility="visible" row="1" columns="*,*,*,*" id="bottomNavBar" class="bottom-nav">
+		<StackLayout id="page1" class="bottom-nav-btn-active" col="0" tap="{{ navigate }}">
+				<Label text="&#xe851;" class="mdi bottom-nav-icon" textWrap="true" />
+				<Label text="Page 1" textWrap="true" class="bottom-nav-text" />
+		</StackLayout>
+		<StackLayout id="page2" class="bottom-nav-btn" tap="{{ navigate }}" col="1">
+				<Label text="&#xe54c;" class="mdi bottom-nav-icon" textWrap="true" />
+				<Label text="Page 2" textWrap="true" class="bottom-nav-text" />
+		</StackLayout>
+		<StackLayout id="page3" class="bottom-nav-btn" tap="{{ navigate }}" col="2">
+				<Label text="&#xe0ca;" class="mdi bottom-nav-icon" textWrap="true" />
+				<Label text="Page 3" textWrap="true" class="bottom-nav-text" />
+		</StackLayout>
+		<StackLayout id="page4" class="bottom-nav-btn" tap="{{ navigate }}" col="3">
+				<Label text="&#xe7f7;" class="mdi bottom-nav-icon" textWrap="true" />
+				<Label text="Page 4" textWrap="true" class="bottom-nav-text" />
+		</StackLayout>
+	</GridLayout>
+</GridLayout>
