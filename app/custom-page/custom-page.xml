@@ -1,0 +1,13 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+	<Page.actionBar>
+		<ActionBar title="Custom Page" icon=""/>
+	</Page.actionBar>
+
+	<StackLayout padding="10">
+		<Label text="This page is not a part of main navigation. Press back button to return to the main view." 
+            class="text-center" textWrap="true" />
+        <Label text="Or press the button below to proceed further." 
+            class="text-center" textWrap="true" />
+		<Button text="Keep Navigating" tap="proceed" />
+	</StackLayout>
+</Page>

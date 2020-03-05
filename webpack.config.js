@@ -14,23 +14,18 @@ const hashSalt = Date.now().toString();
 
 module.exports = env => {
     // Add your custom Activities, Services and other Android app components here.
-    const appComponents = env.appComponents || [];
-    appComponents.push(...[
+    const appComponents = [
         "tns-core-modules/ui/frame",
         "tns-core-modules/ui/frame/activity",
-    ]);
+    ];
 
-    const platform = env && (env.android && "android" || env.ios && "ios" || env.platform);
+    const platform = env && (env.android && "android" || env.ios && "ios");
     if (!platform) {
         throw new Error("You need to provide a target platform!");
     }
 
     const platforms = ["ios", "android"];
     const projectRoot = __dirname;
-
-    if (env.platform) {
-        platforms.push(env.platform);
-    }
 
     // Default destination inside platforms/<platform>/...
     const dist = resolve(projectRoot, nsWebpack.getAppPath(platform, projectRoot));
@@ -63,8 +58,9 @@ module.exports = env => {
     const appFullPath = resolve(projectRoot, appPath);
     const hasRootLevelScopedModules = nsWebpack.hasRootLevelScopedModules({ projectDir: projectRoot });
     let coreModulesPackageName = "tns-core-modules";
-    const alias = env.alias || {};
-    alias['~'] = appFullPath;
+    const alias = {
+        '~': appFullPath
+    };
 
     if (hasRootLevelScopedModules) {
         coreModulesPackageName = "@nativescript/core";
@@ -74,8 +70,7 @@ module.exports = env => {
 
     const entryModule = nsWebpack.getEntryModule(appFullPath, platform);
     const entryPath = `.${sep}${entryModule}.ts`;
-    const entries = env.entries || {};
-    entries.bundle = entryPath;
+    const entries = { bundle: entryPath };
 
     const tsConfigPath = resolve(projectRoot, "tsconfig.tns.json");
 
