@@ -6,8 +6,9 @@
  -->
 
 <GridLayout rows="*, auto" columns="*" loaded="onLoaded">
-
 	<Frame row="0" defaultPage="page1/page1"/>
+	<!---->
+
 
 	<GridLayout backgroundColor="#fff" visibility="visible" row="1" columns="*,*,*,*" id="bottomNavBar" class="bottom-nav">
 		<StackLayout id="page1" class="bottom-nav-btn-active" col="0" tap="{{ navigate }}">
@@ -27,4 +28,6 @@
 				<Label text="Page 4" textWrap="true" class="bottom-nav-text" />
 		</StackLayout>
 	</GridLayout>
+
+	<!---->
 </GridLayout>
