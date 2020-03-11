@@ -8,4 +8,6 @@ export function onNavigatedTo(args: EventData) {
 
     });
 
+    page.addCssFile ("page3.css");
+
 }

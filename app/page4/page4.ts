@@ -9,3 +9,15 @@ export function onNavigatedTo(args: EventData) {
     });
 
 }
+
+export function onTextChange(args) {
+    console.log("change");
+}
+
+export function onClear(args) {
+    console.log("clear");
+}
+
+export function onSubmit(args) {
+    console.log("submit");
+}
