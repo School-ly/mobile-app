@@ -1,9 +1,23 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
 	<Page.actionBar>
-		<ActionBar title="Page 4" icon=""/>
+		<ActionBar>
+			<SearchBar hint="HINT"
+					   clear="onClear"
+					   submit="onSubmit"></SearchBar>
+		</ActionBar>
 	</Page.actionBar>
-
-	<StackLayout padding="10">
-		<Label text="Page 4" class="h2 text-center" textWrap="true" />
-	</StackLayout>
+	<ScrollView orientation="vertical">
+    <GridLayout rows="200 200 200 200 200 200 200 200 200 200">
+        <Label class="m-10" row="0" text="Some text content follows here..." textWrap="true"/>
+        <Label class="m-10" row="1" text="Some text content follows here..." textWrap="true"/>
+        <Label class="m-10" row="2" text="Some text content follows here..." textWrap="true"/>
+        <Label class="m-10" row="3" text="Some text content follows here..." textWrap="true"/>
+        <Label class="m-10" row="4" text="Some text content follows here..." textWrap="true"/>
+        <Label class="m-10" row="5" text="Some text content follows here..." textWrap="true"/>
+        <Label class="m-10" row="6" text="Some text content follows here..." textWrap="true"/>
+        <Label class="m-10" row="7" text="Some text content follows here..." textWrap="true"/>
+        <Label class="m-10" row="8" text="Some text content follows here..." textWrap="true"/>
+        <Label class="m-10" row="9" text="Some text content follows here..." textWrap="true"/>
+    </GridLayout>
+</ScrollView>
 </Page>

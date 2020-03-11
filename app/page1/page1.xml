@@ -14,4 +14,6 @@
         <Label
             text="{{text}}"
             class="text-center" textWrap="true" />
- </StackLayout> </Page>
+    </StackLayout> 
+ 
+ </Page>

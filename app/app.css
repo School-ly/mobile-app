@@ -31,6 +31,8 @@ I am using material font icons here, you can use any icon you want.
     border-top-color: #ececec;
     border-top-width: 1;
     text-align: center;
+    bottom: 0;
+    position:absolute;
 }
 
 .bottom-nav-btn {
