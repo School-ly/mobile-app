@@ -57,3 +57,23 @@ I am using material font icons here, you can use any icon you want.
     font-size: 12;
     text-transform: capitalize;
 }
+
+
+.divider {
+    background-color: lightgray;
+}
+
+.item {
+    border-radius: 30;
+    border-color: #666666;
+    border-width: 1px;
+    border-style: solid;
+}
+.spacer {
+    background-color: transparent;
+}
+.big_text {
+    height: 400px;
+    font-size: 49.5pt;
+    border-radius: 400;
+}

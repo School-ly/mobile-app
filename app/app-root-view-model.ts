@@ -35,7 +35,7 @@ export class AppRootViewModel extends Observable {
         });
 
         topmost().navigate({
-            moduleName: `${tappedMenu.id}/${tappedMenu.id}`,
+            moduleName: `pages/${tappedMenu.id}/${tappedMenu.id}`,
             clearHistory: true,
         });
         tappedMenu.set("class", "bottom-nav-btn bottom-nav-btn-active");
