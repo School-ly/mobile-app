@@ -1,0 +1,30 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo"
+    xmlns:lv="nativescript-ui-listview" xmlns:img="nativescript-image">
+	<Page.actionBar>
+		<ActionBar title="Blog" icon="" />
+	</Page.actionBar>
+
+	<StackLayout padding="10">		
+		<ListView height="1000" items="{{ items }}">
+			<ListView.itemTemplate>
+				<StackLayout tap="showItem">
+					<StackLayout orientation="horizontal" class="item" height="100">
+						<Image src="{{ photo }}" stretch="aspectFit"
+							width="200" />
+						<StackLayout padding="10">
+							<Label text="{{ title }}" textWrap="true"></Label>
+							<Label text="{{ date }}" textWrap="true"></Label>
+							<Label text="{{ place }}" textWrap="true"></Label>
+						</StackLayout>
+						<StackLayout orientation="vertical" height="100">
+							<StackLayout height="45" />
+							<Button text="Bookmark" />
+						</StackLayout>
+					</StackLayout>
+					<StackLayout class="spacer" height="20"></StackLayout>
+				</StackLayout>
+			</ListView.itemTemplate>
+		</ListView>
+		
+	</StackLayout>
+</Page>
