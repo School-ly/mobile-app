@@ -1,0 +1,28 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+	<Page.actionBar>
+		<!--<ActionBar title="Jobs">
+			<StackLayout orientation="horizontal"
+						 ios:horizontalAlignment="center"
+						 android:horizontalAlignment="left">
+				<Image src="res://home" stretch="none" class="action-image"></Image>
+				<SearchBar></SearchBar>
+			</StackLayout>
+		</ActionBar>-->
+		<ActionBar title=" Lessons" android.icon="res://home" android.iconVisibility="always"
+		 ios.icon="res://home" ios.iconVisibility="always">
+		</ActionBar>
+		<StackLayout orientation="horizontal">
+
+		</StackLayout>
+	</Page.actionBar>
+
+	<StackLayout padding="10">
+		<Button class="item big_text" text="Video" tap="show_video"></Button>
+		<StackLayout class="spacer" height="100" />
+		<Button class="item big_text" text="Private"></Button>
+		<StackLayout class="spacer" height="100" />
+		<Button class="item big_text" text="Online"></Button>
+	</StackLayout>
+	
+
+</Page>
