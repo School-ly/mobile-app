@@ -8,11 +8,13 @@
         "noEmitOnError": true,
         "lib": [
             "es6",
-            "dom"
+            "dom",
+            "es2015.iterable"
         ],
         "baseUrl": ".",
         "paths": {
             "*": [
+                "./node_modules/tns-core-modules/*",
                 "./node_modules/*"
             ],
             "~/*": [
@@ -24,6 +26,7 @@
         "node_modules",
         "platforms",
         "typings",
-        "**/*.aot.ts"
+        "**/*.aot.ts",
+        "additional-models"
     ]
 }

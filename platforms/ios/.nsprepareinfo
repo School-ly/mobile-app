@@ -1,8 +1,7 @@
 {
-	"time": "Thu Apr 02 2020 14:32:41 GMT+0300 (Eastern European Summer Time)",
-	"nativePlatformStatus": "3",
-	"release": false,
+	"time": "",
+	"nativePlatformStatus": "1",
 	"changesRequireBuild": true,
-	"projectFileHash": "86efc9ade2e355d72e8d53885c09a3a54f11c4f9183dfffcb8b8a6e8508b10ba",
-	"changesRequireBuildTime": "Thu Apr 02 2020 14:32:41 GMT+0300 (Eastern European Summer Time)"
+	"projectFileHash": "db7acba231201df39822ea6ab8d6778b4867f76cacc27bd27c358b79372d856f",
+	"changesRequireBuildTime": null
 }

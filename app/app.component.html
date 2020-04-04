@@ -1,0 +1,44 @@
+<BottomNavigation selectedIndex="0">
+
+    <!-- The bottom tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
+    <TabStrip>
+        <TabStripItem>
+            <Label text="Universities"></Label>
+            <!-- <Image src="font://&#xf015;" class="fas"></Image> -->
+        </TabStripItem>
+        <TabStripItem class="special">
+            <Label text="Events"></Label>
+            <!-- <Image src="font://&#xf007;" class="fas"></Image> -->
+        </TabStripItem>
+        <TabStripItem class="special">
+            <Label text="Blog"></Label>
+            <!-- <Image src="font://&#xf00e;" class="fas"></Image> -->
+        </TabStripItem>
+        <TabStripItem class="special">
+            <Label text="Lessons"></Label>
+            <!-- <Image src="font://&#xf00e;" class="fas"></Image> -->
+        </TabStripItem>
+        <TabStripItem class="special">
+            <Label text="Jobs"></Label>
+            <!-- <Image src="font://&#xf00e;" class="fas"></Image> -->
+        </TabStripItem>
+    </TabStrip>
+
+    <!-- The number of TabContentItem components should corespond to the number of TabStripItem components -->
+    <TabContentItem>
+        <page-router-outlet name="universities"></page-router-outlet>
+    </TabContentItem>
+    <TabContentItem>
+        <page-router-outlet name="events"></page-router-outlet>
+    </TabContentItem>
+    <TabContentItem>
+        <page-router-outlet name="featured"></page-router-outlet>
+    </TabContentItem>
+    <TabContentItem>
+        <page-router-outlet name="browse"></page-router-outlet>
+    </TabContentItem>
+    <TabContentItem>
+        <page-router-outlet name="search"></page-router-outlet>
+    </TabContentItem>
+
+</BottomNavigation>
