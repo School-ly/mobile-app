@@ -1,1 +1,0 @@
-D:\Users\atsve\Documents\GitHub\nativescriptcore\platforms\android\app/src/main/java

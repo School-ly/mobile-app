@@ -1,63 +1,21 @@
-/*
-In NativeScript, the app.css file is where you place CSS rules that
-you would like to apply to your entire application. Check out
-http://docs.nativescript.org/ui/styling for a full list of the CSS
-selectors and properties you can use to style UI components.
-
-/*
-For example, the following CSS rule changes the font size of all UI
-components that have the btn class name.
-*/
 .btn {
     font-size: 18;
 }
 
-/*
-In many cases you may want to use the NativeScript core theme instead
-of writing your own CSS rules. For a full list of class names in the theme
-refer to http://docs.nativescript.org/ui/theme.
-*/
-@import '~nativescript-theme-core/css/core.light.css';
-
-/*
-I am using material font icons here, you can use any icon you want.
-*/
-.mdi {
-    font-family: MaterialIcons, "Material Icons";
+.far {
+    font-family: "Font Awesome 5 Free", fa-regular-400;
+    /* font-weight: 400;  */
 }
 
-.bottom-nav {
-    margin: 0;
-    border-top-color: #ececec;
-    border-top-width: 1;
-    text-align: center;
-    bottom: 0;
-    position:absolute;
+.fab {
+    font-family: "Font Awesome 5 Brands", fa-brands-400;
+    /* font-weight: 400;  */
 }
 
-.bottom-nav-btn {
-    padding-top: 8;
-    padding-bottom: 8;
-    color: #888888;
-    background-color: transparent;
+.fas {
+    font-family: "Font Awesome 5 Free", fa-solid-900;
+    /* font-weight: 900;  */
 }
-
-.bottom-nav-btn-active {
-    padding-top: 8;
-    padding-bottom: 8;
-    color:#223e92;
-    background-color: transparent;
-}
-
-.bottom-nav-icon {
-    font-size: 20;
-}
-
-.bottom-nav-text {
-    font-size: 12;
-    text-transform: capitalize;
-}
-
 
 .divider {
     background-color: lightgray;
@@ -77,3 +35,5 @@ I am using material font icons here, you can use any icon you want.
     font-size: 49.5pt;
     border-radius: 400;
 }
+
+/*@import '~nativescript-theme-core/css/core.dark.css';*/
