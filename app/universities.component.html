@@ -1,0 +1,15 @@
+<ActionBar title="Universities" class="action-bar"></ActionBar>
+
+<ScrollView class="page">
+    <StackLayout class="home-panel">
+        <Button class="btn btn-primary" text="Back" (tap)="goBack()"></Button>
+        <Button class="btn btn-primary" text="Item" [nsRouterLink]="['../item']"></Button>
+        <ListView [items]="items" (itemTap)="onItemTap($event)" class="list-group">
+            <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+                <!-- The item template can only have a single root view container (e.g. GridLayout, StackLayout, etc.)-->
+                <GridLayout>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+    </StackLayout>
+</ScrollView>
