@@ -1,7 +1,39 @@
-<ActionBar title="Item" class="action-bar"></ActionBar>
+
+<!--<ActionBar title="Item" class="action-bar"></ActionBar>
 
 <ScrollView class="page">
     <StackLayout class="home-panel">
         <Button class="btn btn-primary" text="Back" (tap)="goBack()"></Button>
     </StackLayout>
 </ScrollView>
+<ActionBar title="Event" class="action-bar">
+    <NavigationButton text="Go Back" android.systemIcon="home" tap="onNavBtnTap"></NavigationButton>
+</ActionBar>
+<ActionBar title=" Event" class="action-bar">
+    <Button text="Back" (tap)="onNavBtnTap()">
+    </Button>
+</ActionBar>
+    <ActionItem icon="font://&#xf013;" class="fas" ios.position="right" (tap)="openSettings()"></ActionItem>
+-->
+<ActionBar title="Event">
+    <NavigationButton icon="res://home" (tap)="onNavBtnTap()"></NavigationButton>
+</ActionBar> 
+
+<StackLayout class="page">
+    <StackLayout class="home-panel">
+        <StackLayout>
+            <StackLayout class="item">
+                <Image src="{{ event.photo }}" stretch="aspectFit" height="100" class="centered"></Image>
+                <StackLayout padding="10">
+                    <Label text="{{ event.title }}" textWrap="true"></Label>
+                    <Label text="{{ event.date }}" textWrap="true"></Label>
+                    <Label text="{{ event.place }}" textWrap="true"></Label>
+                    <Label text="{{ event.description }}" textWrap="true"></Label>
+                    
+    <Button text="Back" onTap="onNavBtnTap()">
+    </Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</StackLayout> 

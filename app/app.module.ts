@@ -12,7 +12,6 @@ import { SearchComponent } from "./search.component";
 import { UniversitiesComponent } from "./universities.component";
 import { EventsComponent } from "./events.component";
 import { EventComponent } from "./event.component";
-import { HubComponent } from "./hub.component";
 
 @NgModule({
     bootstrap: [
@@ -33,7 +32,6 @@ import { HubComponent } from "./hub.component";
         UniversitiesComponent,
         EventsComponent,
         EventComponent,
-        HubComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

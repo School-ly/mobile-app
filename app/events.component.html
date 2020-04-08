@@ -2,10 +2,10 @@
 
 <StackLayout class="page">
     <StackLayout class="home-panel">
-        <ListView height="2000" [items]="items" (itemTap)="onItemTap($event)" class="list-group">
+        <ListView height="2000" [items]="items" class="list-group">
             <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
                 <!-- The item template can only have a single root view container (e.g. GridLayout, StackLayout, etc.)-->
-				<StackLayout [nsRouterLink]="['/event/']">
+				<StackLayout [nsRouterLink]="['../event', item._id]">
 					<StackLayout class="item">
 						<StackLayout class="spacer" height="5"></StackLayout>
 						<Image src="{{ item.photo }}" stretch="aspectFit" height="100" class="centered"></Image>
@@ -13,7 +13,7 @@
 							<Label text="{{ item.title }}" textWrap="true"></Label>
 							<Label text="{{ item.date }}" textWrap="true"></Label>
 							<Label text="{{ item.place }}" textWrap="true"></Label>
-							<Button text="Bookmark" class="right" [nsRouterLink]="['/event/${item.id}']"></Button>
+							<Button text="Bookmark" class="right" [nsRouterLink]="['../event']"></Button>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout class="spacer" height="20"></StackLayout>
@@ -21,4 +21,4 @@
             </ng-template>
         </ListView>
     </StackLayout>
-</StackLayout>
+</StackLayout> 
