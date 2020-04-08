@@ -6,6 +6,7 @@ import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { EventData } from 'tns-core-modules/data/observable';
 import { topmost } from "tns-core-modules/ui/frame/frame";
 import { RouterExtensions } from "nativescript-angular/router";
+import { GestureEventData } from "tns-core-modules/ui/gestures";
 
 @Component({
 	selector: "Events",
@@ -22,6 +23,7 @@ export class EventsComponent implements OnInit {
     ngOnInit(): void {
         this.items = [];
 		getString("https://schoolly.tk/events/compact").then((r: string) => {
+			console.log (r);
 			this.items = JSON.parse(r);
 		}, (e) => {
 			console.log("Error: ");
@@ -29,7 +31,10 @@ export class EventsComponent implements OnInit {
 		});
     }
 
-    onItemTap(args: ItemEventData) {
-        console.log(`Index: ${args.index}; View: ${args.view} ; Item: ${this.items[args.index]}`);
+    onTap(args: GestureEventData) {
+        console.log("Tap!");
+        console.log("Object that triggered the event: " + args.object);
+        console.log("View that triggered the event: " + args.view);
+        console.log("Event name: " + args.eventName);
     }
 }
