@@ -10,18 +10,20 @@ import { SearchComponent } from "./search.component";
 import { UniversitiesComponent } from "./universities.component";
 import { EventsComponent } from "./events.component";
 import { EventComponent } from "./event.component";
-import { HubComponent } from "./hub.component";
-/*
+
 const routes: Routes = [
     { path: "", redirectTo: "/(universities:universities//events:events//featured:featured//browse:browse//search:search)", pathMatch: "full" },
 
     { path: "universities", component: UniversitiesComponent, outlet: "universities" },
     { path: "events", component: EventsComponent, outlet: "events" },
-    { path: "event", component: EventComponent, outlet: "events" },
+    { path: "event/:id", component: EventComponent, outlet: "events" },
     { path: "featured", component: FeaturedComponent, outlet: "featured" },
+    { path: "item", component: ItemComponent, outlet: "featured" },
     { path: "browse", component: BrowseComponent, outlet: "browse" },
+    { path: "category", component: CategoryComponent, outlet: "browse" },
     { path: "search", component: SearchComponent, outlet: "search" },
-];*/
+];
+/*
 
 const routes: Routes = [
     { path: "", redirectTo: "/hub", pathMatch: "full" },
@@ -33,6 +35,7 @@ const routes: Routes = [
     { path: "featured", component: FeaturedComponent },
     { path: "browse", component: BrowseComponent },
 ];
+*/
 
 @NgModule({
     imports: [NativeScriptRouterModule.forRoot(routes)],
